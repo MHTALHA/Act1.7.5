@@ -10,6 +10,8 @@ class Plateau {
         $this->joueurA = $joueurA;
         $this->joueurB = $joueurB;
     }
+
+   
  
    
 

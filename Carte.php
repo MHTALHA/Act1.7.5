@@ -12,8 +12,13 @@ abstract class Carte {
         $this->nbDegat=$nbDegat;
  }
 
-
- //abstract public function attaquer(DamageableInterface  $monstre);
+ public function getCoutMana(){
+        return $this->coutMana;
+ }
+ public function getPtsDegats(){
+    return $this->nbDegat;
+}
+ abstract public function attaquer(DamageableInterface  $monstre);
 
 
 }

@@ -1,6 +1,6 @@
 <?php
 require("Carte.php");
-require("Sort.php");
+
 require("DamageableInterface.php");
 
 class Monstre extends Carte implements  DamageableInterface {

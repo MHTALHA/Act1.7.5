@@ -22,6 +22,17 @@ class Joueur {
             
         }
     }
+
+
+    public function __toString(){
+        $str='';
+        foreach($this->monstresPlace as $key => $value){
+            $str = $str . 'Monstre n°'. (intval($key) + 1) . ':'.PHP_EOL.'Cout Mana : ' . $value->getCoutMana().PHP_EOL.'Points vie : '.
+            $value->getPtsVie().PHP_EOL.'Points degats : '.$value->getPtsDegats().PHP_EOL;
+        }
+        return 'Joueur : '. $this->pseudo .PHP_EOL. $str;
+    }
+    
 }
 
 $monstre1=new Monstre(1,9,4);
@@ -37,3 +48,5 @@ $joueur2->placerMonstre($monstre3);
 
  var_dump($joueur1)."<br>";
  var_dump($joueur2);
+ echo $joueur1->__toString();
+ echo $joueur2->__toString();
